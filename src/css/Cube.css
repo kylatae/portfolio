@@ -1,19 +1,20 @@
 /* found at https://www.geeksforgeeks.org/rotating-3d-image-previewer-cube-using-css/ 
 /* CSS for general styling */
-body { 
-  display: flex; 
-  height: 100vh; 
-  justify-content: center; 
-  align-items: center; 
-  background: #240349; 
-} 
+:root {
+  --animationStyle: 'rotate 30s linear infinite';
+  --animationState: 'running';
+  --rotatePercent: 'rotate(0deg)';
+  --white: #ffffff; 
+}
 
 .cube { 
+  justify-content: center; 
   width: 400px; 
   height: 400px; 
   position: relative; 
   transform-style: preserve-3d; 
-  animation: rotate 10s linear infinite; 
+  animation: var(--animationStyle); 
+  animation-play-state: var(--animationState); 
 } 
 
 img { 
@@ -26,7 +27,7 @@ img {
   width: 100%; 
   height: 100%; 
   position: absolute; 
-  top: 0; 
+  top: 160px; 
   left: 0; 
   opacity: 0.9; 
 } 
@@ -63,19 +64,32 @@ img {
 /* Animating the elements */
 @keyframes rotate { 
   0%, 
-  100% { 
-      transform: rotate(0deg); 
+  0% { 
+      transform: var(--rotatePercent); 
   } 
+  10% { 
+    transform: rotateY(45deg) rotateZ(45deg); 
+  }
   20% { 
-      transform: rotateY(90deg) rotateZ(90deg); 
-  } 
+    transform: rotateY(90deg) rotateZ(90deg); 
+  }
+  30% { 
+    transform: rotateY(135deg) rotateZ(0deg); 
+  }
   40% { 
-      transform: rotateY(180deg) rotateZ(-90deg); 
+    transform: rotateY(180deg) rotateZ(-90deg); 
+  }
+  50%{
+    transform: rotateY(225deg) rotateZ(0deg);
   } 
   60% { 
-      transform: rotateY(270deg) rotateZ(90deg); 
+    transform: rotateY(270deg) rotateZ(90deg); 
   } 
+  70%{
+    transform: rotateY(315deg) rotateZ(0deg)
+  }
   80% { 
-      transform: rotateY(360deg) rotateZ(-90deg); 
+    transform: rotateY(360deg) rotateZ(-90deg); 
   } 
+
 }

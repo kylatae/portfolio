@@ -1,0 +1,28 @@
+body { 
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: stretch; 
+  background: #240349; 
+} 
+.topBar {
+  position: "absolute";
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+
+  left: 0px;
+  top: 0px;
+  width: 600px;
+  color:beige;
+}
+
+.mainScreen {
+  position: "absolute";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0px;
+  margin-top: 100px;
+}
