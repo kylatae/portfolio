@@ -13,8 +13,8 @@
   height: 400px; 
   position: relative; 
   transform-style: preserve-3d; 
-  animation: var(--animationStyle); 
-  animation-play-state: var(--animationState); 
+  animation: rotate 30s linear infinite; 
+  animation-play-state: running; 
 } 
 
 img { 
@@ -65,7 +65,7 @@ img {
 @keyframes rotate { 
   0%, 
   0% { 
-      transform: var(--rotatePercent); 
+      transform: rotate(0deg); 
   } 
   10% { 
     transform: rotateY(45deg) rotateZ(45deg); 

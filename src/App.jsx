@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Cube from './components/Cube'
-import Slider from './components/Slider'
-import Move from './components/Move'
+
+
 
 
 function App() {
@@ -9,7 +9,8 @@ function App() {
 
   return (
     <>
-      <Slider />
+
+      
       <Cube />
 
     </>
