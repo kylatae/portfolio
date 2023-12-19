@@ -14,7 +14,7 @@
   position: relative; 
   transform-style: preserve-3d; 
   animation: rotate 30s linear infinite; 
-  animation-play-state: running; 
+  animation-play-state: running
 } 
 
 img { 

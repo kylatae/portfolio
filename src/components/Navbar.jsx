@@ -3,8 +3,7 @@ export default function AppNavbar () {
 
   return (
     <>
-    Fancy Title Up Here
-
+    Portfolio Page of Arthur Henningfield - Feel free to explore projects below by clicking on ths cube.
     </>
   );
 };
